@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Read and write file -->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="#008080"
+        android:padding="5dp"
+        android:textColor="#fff" />
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_margin="5dp"
+        android:layout_marginTop="22dp"
+        android:ems="10">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editText1"
+        android:layout_margin="5dp"
+        android:onClick="WriteBtnMain"
+        android:text="Write Text into File" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1"
+        android:layout_margin="5dp"
+        android:onClick="ReadBtnMain"
+        android:text="Read Text From file" />
+
+    <!-- Database and shared preferences -->
+    <!--
+        <TextView
+            android:id="@+id/tvSharedPref"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Initial string"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"
+            android:layout_below="@+id/button2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SQLite Database"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp"
+            android:layout_below="@+id/tvSharedPref"/>
+    -->
+    <EditText
+        android:id="@+id/etPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_below="@+id/button2"/>
+
+    <EditText
+        android:id="@+id/etPersonAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Age"
+        android:layout_below="@+id/etPersonName"/>
+
+
+    <Button
+        android:id="@+id/btnSavePerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSQLiteDatabase"
+        android:text="Save person"
+        android:layout_below="@+id/etPersonAge"/>
+
+    <Button
+        android:id="@+id/btnGetAllPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSQLiteDatabase"
+        android:text="Get All Person"
+        android:layout_below="@+id/btnSavePerson"/>
+
+    <ListView
+        android:id="@+id/lvPerson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
